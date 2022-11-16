@@ -1,0 +1,188 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 120px;
+}
+.header img {
+    width: 200px;
+}
+
+/*
+ * Routing
+*/
+.routing .icons {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+}
+.routing .icons hr {
+    background-color: #CDCBBC;
+    width: 350px;
+    margin-top: 40px;
+}
+.routing .icons img {
+    background-color: #fff;
+    width: 80px;
+    position: absolute;
+    padding: 0 15px;
+}
+
+.routing .form {
+    margin-top: 55px;
+}
+.routing .form input[type="text"].input-name {
+    width: 250px;
+    padding: 7px;
+    border: 2px solid #777AC1;
+    border-radius: 5px;
+    outline: none;
+}
+
+.routing .form span {
+    color: #999891;
+}
+.routing .form .checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 330px;
+    margin-top: 10px;
+    cursor: pointer;
+}.routing .form .checkbox-container label { color: #5E6082;margin-left: 15px;cursor: pointer; }
+
+.routing .form .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}.routing .form .date .date-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+.routing .form .date input[type="text"] {
+    width: 30px;
+    padding: 4px;
+    border: 2px solid #777AC1;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+}
+.routing .form .date input[type="text"].input-year {
+    width: 60px;
+}
+
+.routing .threedots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+}
+.routing .threedots button {
+    background: #CDCBBC;
+    width: 8px;
+    height: 8px;
+    margin-left: 6px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+}.routing .threedots button.btn-active {
+    background-color: #000;
+    width: 10px;
+    height: 10px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .header {
+        margin: 10px 20px;
+    }
+    .header img {
+        width: 180px;
+    }
+
+    .routing .icons hr {
+        background-color: #CDCBBC;
+        width: 250px;
+        margin-top: 40px;
+    }
+
+    .routing .form .checkbox-container {
+        justify-content: flex-start;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+}
+
+
+
+
+/*
+ * custom-checkbox-style
+*/
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+input[type="checkbox"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+  
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]::before {
+    /* ...existing styles */
+  
+    /* Windows High Contrast Mode */
+    background-color: #424572;
+}
